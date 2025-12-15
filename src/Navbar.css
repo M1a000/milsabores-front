@@ -1,0 +1,159 @@
+/* --- ESTILOS GENERALES Y ESCRITORIO  --- */
+.navbar-container {
+  background-color: var(--color-chocolate);
+  padding: 15px 40px; /* Espaciado amplio como querías */
+  display: flex;
+  justify-content: space-between; /* Separa los grupos a los extremos */
+  align-items: center;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  font-family: 'Lato', sans-serif;
+  height: 80px; /* Altura fija para evitar saltos */
+}
+
+/* El Logo siempre a la izquierda */
+.logo {
+  color: #FFF5E1;
+  font-size: 1.8rem;
+  text-decoration: none;
+  font-family: 'Pacifico', cursive;
+  margin-right: 40px;
+  z-index: 1001;
+}
+
+/* GRUPO IZQUIERDO (Links de navegación) */
+.desktop-left {
+  display: flex;
+  align-items: center;
+  flex: 1; /* Ocupa espacio disponible */
+}
+
+/* GRUPO DERECHO (Usuario, Carrito, Login) */
+.desktop-right {
+  display: flex;
+  align-items: center;
+  gap: 20px; /* Separación entre elementos */
+}
+
+/* Enlaces normales */
+.nav-link {
+  color: #ddd;
+  text-decoration: none;
+  font-weight: bold;
+  margin-right: 25px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+
+.nav-link:hover {
+  color: white;
+}
+
+/* Botón Admin (Dorado) */
+.btn-admin {
+  background-color: #f1c40f;
+  color: #2c3e50;
+  padding: 8px 15px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-right: 20px;
+}
+
+/* --- EL BOTÓN TIPO SPOTIFY (PÍLDORA BLANCA) --- */
+.spotify-btn {
+  background-color: white;
+  color: black; /* Contraste fuerte */
+  padding: 12px 32px; /* Gordito */
+  border-radius: 40px; /* Redondo total */
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: transform 0.2s;
+  display: inline-block;
+}
+
+.spotify-btn:hover {
+  transform: scale(1.05); /* Efecto pop al pasar el mouse */
+}
+
+/* Enlace "Regístrate" (Texto simple al lado del botón) */
+.registrate-link {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  margin-right: 10px;
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+/* Botón Hamburguesa (Oculto en escritorio) */
+.hamburger {
+  display: none;
+}
+
+/* MENÚ MÓVIL (Oculto en escritorio) */
+.mobile-menu-container {
+  display: none;
+}
+
+
+/* --- ESTILOS MÓVILES (Celulares < 768px) --- */
+@media (max-width: 900px) { /* Ajusté a 900px para tablets también */
+  
+  .navbar-container {
+    padding: 15px 20px;
+  }
+
+  /* Ocultamos los menús de escritorio */
+  .desktop-left, .desktop-right {
+    display: none;
+  }
+
+  /* Mostramos el botón hamburguesa */
+  .hamburger {
+    display: block;
+    font-size: 2rem;
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1002;
+  }
+
+  /* Contenedor del menú desplegable */
+  .mobile-menu-container {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--color-chocolate);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    transform: translateY(-100%); /* Oculto arriba */
+    transition: transform 0.3s ease-in-out;
+    z-index: 1000;
+  }
+
+  .mobile-menu-container.abierto {
+    transform: translateY(0); /* Se muestra */
+  }
+
+  /* Ajustes de letra para móvil */
+  .nav-link {
+    font-size: 1.5rem;
+    margin: 0;
+  }
+  
+  .spotify-btn {
+    width: 80%;
+    text-align: center;
+  }
+}

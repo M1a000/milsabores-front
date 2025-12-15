@@ -1,0 +1,56 @@
+/* src/index.css */
+
+/* Importamos fuentes de Google (Lato y Pacifico) */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Pacifico&display=swap');
+
+:root {
+  --color-fondo: #FFF5E1;     /* Crema Pastel */
+  --color-acento: #FFC0CB;    /* Rosa Suave */
+  --color-chocolate: #8B4513; /* Chocolate */
+  --color-texto: #5D4037;     /* Marrón Oscuro */
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+  font-family: 'Lato', sans-serif;
+}
+
+.titulo-principal {
+  text-align: center;
+  font-family: 'Pacifico', cursive;
+  color: var(--color-chocolate);
+  font-size: 3rem;
+  margin-top: 20px;
+}
+/* --- NOTIFICACIONES FLOTANTES (TOASTS) --- */
+.notificacion-flotante {
+  position: fixed;
+  top: 20px;
+  right: 20px; /* Aparece arriba a la derecha */
+  background-color: var(--color-chocolate); /* Usamos tu color de marca */
+  color: white;
+  padding: 15px 25px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  z-index: 1000; /* Para que quede encima de todo */
+  animation: entradaSuave 0.5s ease-out;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.notificacion-error {
+  background-color: #d32f2f; /* Rojo para errores */
+}
+
+.notificacion-exito {
+  background-color: #2e7d32; /* Verde para éxito */
+}
+
+@keyframes entradaSuave {
+  from { transform: translateX(100%); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
