@@ -64,9 +64,5 @@ Para facilitar la evaluación, el sistema cuenta con usuarios pre-cargados (si s
 | **Vendedor** | `vendedor@mil.cl` | `123456` |
 | **Cliente** | `cliente@mil.cl` | `123456` | --> | **Cliente** | `cliente@duocuc.cl` | `123456` |
 
-## 📸 Capturas
-
-*(Puedes agregar aquí las capturas de pantalla de tu Manual de Usuario para que se vea genial en GitHub)*
-
 ---
 **Desarrollado por:** Solange Labbé - DESARROLLO FULLSTACK II 003D
