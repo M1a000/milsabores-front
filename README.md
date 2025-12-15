@@ -1,16 +1,72 @@
-# React + Vite
+# 🍰 Pastelería Mil Sabores - Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Interfaz de usuario moderna y responsiva desarrollada con **React 18** y **Vite**. Ofrece una experiencia de compra fluida con diseño "Glassmorphism", gestión de carrito en tiempo real y paneles de administración dedicados.
 
-Currently, two official plugins are available:
+## Tecnologías Utilizadas
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+* **React 18** (Functional Components & Hooks)
+* **Vite** (Build tool ultrarrápido)
+* **CSS Modules / Custom CSS** (Diseño Glassmorphism y Responsive)
+* **React Router DOM** (Navegación SPA)
+* **Fetch API** (Consumo de servicios REST)
+* **LocalStorage** (Persistencia de sesión y carrito)
 
-## React Compiler
+## Características Clave
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+* **Experiencia de Usuario (UX):**
+    * Diseño Responsivo (Mobile First) con menú hamburguesa.
+    * Notificaciones flotantes (Toasts) para feedback de acciones.
+    * Modales de confirmación personalizados.
+* **Tienda y Carrito:**
+    * Lógica de carrito persistente.
+    * **Motor de Descuentos:** Cálculo automático (Cumpleaños Alumno Duoc, Tercera Edad).
+    * **Pasarela de Pago Simulada:** Integración visual con PayPal (Spinner de carga y validación).
+* **Seguridad:**
+    * Manejo de sesión mediante **JWT**.
+    * Rutas protegidas (`/admin`, `/perfil`) según el Rol del usuario.
+* **Gestión (Backoffice):**
+    * Panel de Administrador con Dashboard de métricas.
+    * CRUD visual de Productos y Usuarios.
+    * Historial de ventas con descarga de Boletas PDF.
 
-## Expanding the ESLint configuration
+## Instalación y Ejecución
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Prerrequisitos
+* Tener instalado **Node.js** (v16 o superior).
+
+### Pasos para ejecutar
+
+1.  **Entrar a la carpeta del proyecto:**
+    ```bash
+    cd frontend-pasteleria
+    ```
+
+2.  **Instalar dependencias:**
+    ```bash
+    npm install
+    ```
+
+3.  **Iniciar servidor de desarrollo:**
+    ```bash
+    npm run dev
+    ```
+
+4.  **Abrir en el navegador:**
+
+
+## Credenciales de Prueba
+
+Para facilitar la evaluación, el sistema cuenta con usuarios pre-cargados (si se importó el script SQL):
+
+| Rol | Email | Contraseña |
+| :--- | :--- | :--- |
+| **Administrador** | `admin@mil.cl` | `123456` |
+| **Vendedor** | `vendedor@mil.cl` | `123456` |
+| **Cliente** | `cliente@mil.cl` | `123456` | --> | **Cliente** | `cliente@duocuc.cl` | `123456` |
+
+## 📸 Capturas
+
+*(Puedes agregar aquí las capturas de pantalla de tu Manual de Usuario para que se vea genial en GitHub)*
+
+---
+**Desarrollado por:** Solange Labbé - DESARROLLO FULLSTACK II 003D
